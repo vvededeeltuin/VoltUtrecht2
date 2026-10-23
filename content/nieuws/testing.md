@@ -1,5 +1,5 @@
 ---
-title: "Volt Utrecht dient motie in over betaalbaar wonen"
+title: "Volt testing"
 date: 2026-06-10
 type: "nieuws"
 tags: ["utrecht"]
