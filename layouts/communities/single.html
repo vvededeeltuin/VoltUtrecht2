@@ -1,0 +1,68 @@
+{{ define "main" }}
+
+  {{/* ── HERO (same as homepage but community-specific) ── */}}
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Volt Afdeling Utrecht — Community</p>
+      <h1>{{ .Title }}</h1>
+      <p class="hero-tagline">{{ .Params.description | default "Een actieve Volt community in de regio Utrecht." }}</p>
+      <div class="hero-actions">
+        <a href="/meedoen/" class="btn btn-large btn-hero-primary">Doe mee</a>
+        <a href="/evenementen/" class="btn btn-large btn-hero-outline">Evenementen</a>
+      </div>
+    </div>
+  </section>
+
+  {{/* ── VISIE / WAAR STAAN WIJ VOOR ── */}}
+  {{ $key := .Params.teamKey }}
+  {{ $teamData := index site.Data.team $key }}
+
+  {{ if $teamData }}
+    {{ partial "visie-section.html" (dict
+        "title"    "Waar staan wij voor"
+        "intro"    .Params.visionIntro
+        "cards"    $teamData.vision
+        "link"     ""
+    ) }}
+  {{ end }}
+
+  {{/* ── WIE ZIJN WIJ (team cards) ── */}}
+  {{ if $teamData }}
+  <section class="team-section-wrap">
+    <div class="container">
+      <h2 class="section-title">Wie zijn wij</h2>
+      <p class="section-subtitle">Maak kennis met de mensen achter onze community.</p>
+      {{ partial "team-section.html" (dict "team" $teamData) }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ── EVENEMENTEN (gefilterd op community) ── */}}
+  <section class="events-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Onze evenementen</h2>
+          <p class="section-subtitle">Activiteiten van {{ .Title }}.</p>
+        </div>
+        <a href="/evenementen/" class="view-all">Alle evenementen →</a>
+      </div>
+      {{ partial "events-section.html" (dict "tag" $key "limit" 3) }}
+    </div>
+  </section>
+
+  {{/* ── NIEUWS (gefilterd op community) ── */}}
+  <section class="news-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Nieuws uit {{ .Title }}</h2>
+          <p class="section-subtitle">Blijf op de hoogte van onze community.</p>
+        </div>
+        <a href="/nieuws/" class="view-all">Alle nieuws →</a>
+      </div>
+      {{ partial "news-section.html" (dict "tag" $key "limit" 3) }}
+    </div>
+  </section>
+
+{{ end }}

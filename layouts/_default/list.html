@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
+    </div>
+  </div>
+  <div class="page-content">
+    {{ with .Content }}<div class="intro-section">{{ . }}</div>{{ end }}
+    {{ if .Pages }}
+      <div class="overview-grid">
+        {{ range .Pages }}
+          <a class="overview-card" href="{{ .Permalink }}">
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Params.description | default .Summary }}</p>
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

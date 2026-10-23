@@ -1,0 +1,19 @@
+vision:
+  - person: "Voorzitter"
+    title: "Samen sterk"
+    text: "Wij zetten ons in voor een betere toekomst in onze gemeenschap, samen met iedereen die dat wil."
+    photo: "/img/team/placeholder.jpg"
+  - person: "Secretaris"
+    title: "Open en transparant"
+    text: "Wij communiceren helder en zijn altijd bereikbaar voor de mensen in onze community."
+    photo: "/img/team/placeholder.jpg"
+
+members:
+  - name: "Voorzitter"
+    role: "Voorzitter"
+    statement: "Wij zetten ons in voor een betere toekomst in onze gemeenschap."
+    photo: "/img/team/placeholder.jpg"
+  - name: "Secretaris"
+    role: "Secretaris"
+    statement: "Samen bereiken we meer dan alleen."
+    photo: "/img/team/placeholder.jpg"

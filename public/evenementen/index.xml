@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Evenementen on Volt Afdeling Utrecht</title>
+    <link>http://localhost:1313/evenementen/</link>
+    <description>Recent content in Evenementen on Volt Afdeling Utrecht</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl</language>
+    <lastBuildDate>Wed, 05 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/evenementen/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debatavond Fractie 1: Duurzame toekomst</title>
+      <link>http://localhost:1313/evenementen/debatavond-fractie-1/</link>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/evenementen/debatavond-fractie-1/</guid>
+      <description>Fractie 1 organiseert een open debatavond over duurzaamheid en de toekomst van onze regio.</description>
+    </item>
+    <item>
+      <title>Debatavond: Betaalbaar wonen in Utrecht</title>
+      <link>http://localhost:1313/evenementen/debat-utrecht/</link>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/evenementen/debat-utrecht/</guid>
+      <description>Volt Utrecht organiseert een open debatavond over de wooncrisis en wat we er samen aan kunnen doen.</description>
+    </item>
+    <item>
+      <title>Buurtfeest Community 1</title>
+      <link>http://localhost:1313/evenementen/buurtfeest-community-1/</link>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/evenementen/buurtfeest-community-1/</guid>
+      <description>Gezellig buurtfeest met muziek, eten en activiteiten voor jong en oud.</description>
+    </item>
+    <item>
+      <title>Zomerborrel Volt Amersfoort</title>
+      <link>http://localhost:1313/evenementen/buurtfeest-amersfoort/</link>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/evenementen/buurtfeest-amersfoort/</guid>
+      <description>Gezellige zomerborrel voor Volt leden en sympathisanten in Amersfoort.</description>
+    </item>
+  </channel>
+</rss>

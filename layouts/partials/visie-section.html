@@ -1,0 +1,35 @@
+{{/* 
+  Params:
+    .title   — section heading (default "Onze visie")
+    .intro   — subtitle text
+    .cards   — slice of vision card data (from page front matter or data file)
+    .link    — optional "read more" URL
+    .linkText — optional link label
+*/}}
+{{ $title    := .title    | default "Onze visie" }}
+{{ $intro    := .intro    | default "" }}
+{{ $cards    := .cards }}
+{{ $link     := .link     | default "" }}
+{{ $linkText := .linkText | default "Lees meer" }}
+
+{{ if $cards }}
+<section class="vision-section">
+  <div class="container">
+    <h2 class="section-title">{{ $title }}</h2>
+    {{ with $intro }}<p class="section-subtitle">{{ . }}</p>{{ end }}
+    <div class="vision-grid">
+      {{ range $cards }}
+        <div class="vision-card">
+          <img class="vision-card-photo" src="{{ .photo }}" alt="{{ .person }}" loading="lazy">
+          <div class="vision-card-body">
+            <p class="vision-person">{{ .person }}</p>
+            <h3>{{ .title }}</h3>
+            <p>{{ .text }}</p>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+    {{ with $link }}<a class="section-link" href="{{ . }}">{{ $linkText }}</a>{{ end }}
+  </div>
+</section>
+{{ end }}

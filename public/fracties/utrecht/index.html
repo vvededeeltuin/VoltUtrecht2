@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemeenteraadsfractie Utrecht | Volt Afdeling Utrecht</title>
+  <meta name="description" content="Volt in de raad van Gemeenteraadsfractie Utrecht">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+  <nav class="navbar">
+  <div class="navbar-inner">
+    <a class="navbar-brand" href="/">
+      <span class="brand-volt">Volt</span>
+      Afdeling Utrecht
+    </a>
+
+    <button class="navbar-toggle" id="navToggle" aria-label="Menu">☰</button>
+
+    <ul class="nav-menu" id="navMenu">
+      
+        
+          <li class="nav-item">
+            <a href="/nieuws/">
+              Nieuws
+            </a>
+          </li>
+        
+      
+        
+          <li class="nav-item has-dropdown">
+            
+            <a class="nav-parent-link" href="/communities/">Communities</a>
+            <button class="dropdown-toggle" aria-label="Toon submenu voor Communities">▾</button>
+            <ul class="dropdown">
+              
+                <li>
+                  <a href="/communities/amersfoort/">
+                    Amersfoort
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/bunnik/">
+                    Bunnik
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-3/">
+                    Community 3
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-4/">
+                    Community 4
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-5/">
+                    Community 5
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-6/">
+                    Community 6
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-7/">
+                    Community 7
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-8/">
+                    Community 8
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-9/">
+                    Community 9
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-10/">
+                    Community 10
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="nav-item has-dropdown">
+            
+            <a class="nav-parent-link" href="/fracties/">Fracties</a>
+            <button class="dropdown-toggle" aria-label="Toon submenu voor Fracties">▾</button>
+            <ul class="dropdown">
+              
+                <li>
+                  <a href="/fracties/provinciale-staten/">
+                    Provinciale Staten
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/fracties/de-bilt/">
+                    De Bilt
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/fracties/houten/">
+                    Houten
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/fracties/soest/">
+                    Soest
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/fracties/utrecht/">
+                    Utrecht
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/fracties/woerden/">
+                    Woerden
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/fracties/zeist/">
+                    Zeist
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="nav-item has-dropdown">
+            
+            <a class="nav-parent-link" href="/beweging/">Beweging</a>
+            <button class="dropdown-toggle" aria-label="Toon submenu voor Beweging">▾</button>
+            <ul class="dropdown">
+              
+                <li>
+                  <a href="/beweging/klimaat/">
+                    Klimaat
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/beweging/vluchtelingen/">
+                    Vluchtelingen
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/beweging/oekraine/">
+                    Oekraïne
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/beweging/thema-4/">
+                    Thema 4
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+            <a href="/evenementen/">
+              Evenementen
+            </a>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+            <a href="/bestuur/">
+              Bestuur
+            </a>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+            <a href="/meedoen/">
+              Doe mee
+            </a>
+          </li>
+        
+      
+    </ul>
+
+    <div class="nav-cta">
+      
+        <a href="/meedoen/" class="btn btn-primary">Word lid</a>
+      
+    </div>
+  </div>
+</nav>
+
+<script>
+(function() {
+  
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+
+  
+  
+  document.querySelectorAll('.dropdown-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var li = this.closest('.has-dropdown');
+      var isOpen = li.classList.contains('open');
+      
+      document.querySelectorAll('.has-dropdown.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+      if (!isOpen) li.classList.add('open');
+    });
+  });
+
+  
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.has-dropdown.open').forEach(function(el) {
+      el.classList.remove('open');
+    });
+  });
+
+  
+  if (window.matchMedia('(min-width: 821px)').matches) {
+    document.querySelectorAll('.has-dropdown').forEach(function(li) {
+      li.addEventListener('mouseenter', function() { this.classList.add('open'); });
+      li.addEventListener('mouseleave', function() { this.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+
+  <main>
+
+
+
+
+  
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Volt Afdeling Utrecht — Fractie</p>
+      <h1>Gemeenteraadsfractie Utrecht</h1>
+      <p class="hero-tagline">Volt in de raad van Gemeenteraadsfractie Utrecht</p>
+      <div class="hero-actions">
+        <a href="/meedoen/" class="btn btn-large btn-hero-primary">Doe mee</a>
+        <a href="/evenementen/" class="btn btn-large btn-hero-outline">Evenementen</a>
+      </div>
+    </div>
+  </section>
+
+  
+
+  
+    
+
+
+
+
+
+
+
+<section class="vision-section">
+  <div class="container">
+    <h2 class="section-title">Waar staan wij voor</h2>
+    
+    <div class="vision-grid">
+      
+        <div class="vision-card">
+          <img class="vision-card-photo" src="/img/team/ahmed-el-ouali.jpg" alt="Ahmed El Ouali — Fractievoorzitter" loading="lazy">
+          <div class="vision-card-body">
+            <p class="vision-person">Ahmed El Ouali — Fractievoorzitter</p>
+            <h3>Helder en constructief</h3>
+            <p>Wij brengen de Volt-stem in de raad — zonder omwegen, gebaseerd op feiten en altijd gericht op samenwerking.</p>
+          </div>
+        </div>
+      
+        <div class="vision-card">
+          <img class="vision-card-photo" src="/img/team/nora-janssen.jpg" alt="Nora Janssen — Raadslid" loading="lazy">
+          <div class="vision-card-body">
+            <p class="vision-person">Nora Janssen — Raadslid</p>
+            <h3>Sociaal en groen</h3>
+            <p>Lokaal beleid met een Europese blik. Wij verbinden duurzaamheid met sociale rechtvaardigheid in elke raadsvergadering.</p>
+          </div>
+        </div>
+      
+        <div class="vision-card">
+          <img class="vision-card-photo" src="/img/team/thomas-bergmann.jpg" alt="Thomas Bergmann — Raadslid" loading="lazy">
+          <div class="vision-card-body">
+            <p class="vision-person">Thomas Bergmann — Raadslid</p>
+            <h3>Toekomstgericht</h3>
+            <p>De keuzes van vandaag bepalen de wereld van morgen. Wij stemmen altijd met de toekomst in gedachten.</p>
+          </div>
+        </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+  
+
+  
+  <section class="team-section-wrap">
+    <div class="container">
+      <h2 class="section-title">Onze fractie</h2>
+      <p class="section-subtitle">Maak kennis met onze raadsleden.</p>
+      <div class="team-grid">
+  
+    
+      <div class="team-card">
+        <div class="team-card-photo-wrap">
+          <img class="team-card-photo" src="/img/team/ahmed-el-ouali.jpg" alt="Foto van Ahmed El Ouali" loading="lazy">
+        </div>
+        <div class="team-card-body">
+          <h3>Ahmed El Ouali</h3>
+          <p class="team-role">Fractievoorzitter</p>
+          <blockquote class="team-statement">"Wij brengen de Volt-stem in de raad — helder, eerlijk en constructief."</blockquote>
+        </div>
+      </div>
+    
+      <div class="team-card">
+        <div class="team-card-photo-wrap">
+          <img class="team-card-photo" src="/img/team/nora-janssen.jpg" alt="Foto van Nora Janssen" loading="lazy">
+        </div>
+        <div class="team-card-body">
+          <h3>Nora Janssen</h3>
+          <p class="team-role">Raadslid</p>
+          <blockquote class="team-statement">"Lokaal beleid met een Europese blik op de toekomst."</blockquote>
+        </div>
+      </div>
+    
+      <div class="team-card">
+        <div class="team-card-photo-wrap">
+          <img class="team-card-photo" src="/img/team/thomas-bergmann.jpg" alt="Foto van Thomas Bergmann" loading="lazy">
+        </div>
+        <div class="team-card-body">
+          <h3>Thomas Bergmann</h3>
+          <p class="team-role">Raadslid</p>
+          <blockquote class="team-statement">"Duurzaamheid en sociale rechtvaardigheid zijn onlosmakelijk verbonden."</blockquote>
+        </div>
+      </div>
+    
+  
+</div>
+
+    </div>
+  </section>
+  
+
+  <section class="events-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Onze evenementen</h2>
+          <p class="section-subtitle">Activiteiten van Gemeenteraadsfractie Utrecht.</p>
+        </div>
+        <a href="/evenementen/" class="view-all">Alle evenementen →</a>
+      </div>
+      
+
+
+
+
+
+  
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+  
+
+
+
+
+
+  <div class="events-grid">
+    
+      <article class="event-card">
+        <div class="event-meta">
+          
+            <span class="event-date-badge">5 Aug</span>
+          
+          
+            <span class="event-location-text">📍 Stadhuis Utrecht, Zaal A</span>
+          
+        </div>
+        <h3><a href="http://localhost:1313/evenementen/debat-utrecht/">Debatavond: Betaalbaar wonen in Utrecht</a></h3>
+        <p>Volt Utrecht organiseert een open debatavond over de wooncrisis en wat we er samen aan kunnen doen.</p>
+      </article>
+    
+  </div>
+
+
+    </div>
+  </section>
+
+  <section class="news-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Nieuws uit Gemeenteraadsfractie Utrecht</h2>
+          <p class="section-subtitle">Blijf op de hoogte van onze fractie.</p>
+        </div>
+        <a href="/nieuws/" class="view-all">Alle nieuws →</a>
+      </div>
+      
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+  
+
+
+
+
+
+  <div class="news-grid">
+    
+      <article class="news-card">
+        <time datetime="2026-06-10">10 June 2026</time>
+        <h3><a href="http://localhost:1313/nieuws/nieuws-utrecht-motie/">Volt Utrecht dient motie in over betaalbaar wonen</a></h3>
+        <p>De Volt fractie Utrecht heeft een motie ingediend over betaalbaar wonen en de aanpak van de wooncrisis.</p>
+      </article>
+    
+  </div>
+
+
+    </div>
+  </section>
+
+
+
+</main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Volt Afdeling Utrecht</div>
+      <div class="footer-email">
+        <a href="mailto:info@voltutrecht.nl">info@voltutrecht.nl</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://facebook.com/" aria-label="Facebook">fb</a>
+        <a href="https://instagram.com/" aria-label="Instagram">ig</a>
+        <a href="https://linkedin.com/" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="/nieuws/">Nieuws</a>
+      <a href="/evenementen/">Evenementen</a>
+      <a href="/bestuur/">Bestuur</a>
+      <a href="/vacatures/">Vacatures</a>
+      <a href="/meedoen/">Doe mee</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Volt Afdeling Utrecht &middot;
+    <a href="/privacy/">Privacy &amp; Cookies</a>
+  </div>
+</footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('open');
+    });
+    document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        if (window.innerWidth < 820) {
+          e.preventDefault();
+          this.parentElement.classList.toggle('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

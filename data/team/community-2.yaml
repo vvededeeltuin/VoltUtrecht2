@@ -1,0 +1,13 @@
+members:
+  - name: "Voorzitter Community 2"
+    role: "Voorzitter"
+    bio: "De voorzitter van Community 2 zet zich dagelijks in voor de gemeenschap."
+    photo: "/img/team/placeholder.svg"
+  - name: "Secretaris Community 2"
+    role: "Secretaris"
+    bio: "De secretaris coördineert de activiteiten van Community 2."
+    photo: "/img/team/placeholder.svg"
+  - name: "Penningmeester Community 2"
+    role: "Penningmeester"
+    bio: "De penningmeester beheert de middelen van Community 2."
+    photo: "/img/team/placeholder.svg"

@@ -1,0 +1,13 @@
+members:
+  - name: "Fractievoorzitter 1"
+    role: "Fractievoorzitter"
+    bio: "De fractievoorzitter vertegenwoordigt Fractie 1 in de raad."
+    photo: "/img/team/placeholder.svg"
+  - name: "Raadslid A Fractie 1"
+    role: "Raadslid"
+    bio: "Actief raadslid met focus op lokaal beleid."
+    photo: "/img/team/placeholder.svg"
+  - name: "Raadslid B Fractie 1"
+    role: "Raadslid"
+    bio: "Raadslid met expertise in duurzaamheid en ruimtelijke ordening."
+    photo: "/img/team/placeholder.svg"

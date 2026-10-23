@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fractie-1 on Volt Afdeling Utrecht</title>
+    <link>http://localhost:1313/tags/fractie-1/</link>
+    <description>Recent content in Fractie-1 on Volt Afdeling Utrecht</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl</language>
+    <lastBuildDate>Wed, 05 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/fractie-1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debatavond Fractie 1: Duurzame toekomst</title>
+      <link>http://localhost:1313/evenementen/debatavond-fractie-1/</link>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/evenementen/debatavond-fractie-1/</guid>
+      <description>Fractie 1 organiseert een open debatavond over duurzaamheid en de toekomst van onze regio.</description>
+    </item>
+    <item>
+      <title>Fractie 1 dient motie in over duurzaamheid</title>
+      <link>http://localhost:1313/news/nieuws-fractie-1-motie/</link>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/nieuws-fractie-1-motie/</guid>
+      <description>Fractie 1 heeft een motie ingediend over duurzaam beleid in onze regio.</description>
+    </item>
+    <item>
+      <title>Fractie 1 dient motie in over duurzaamheid</title>
+      <link>http://localhost:1313/nieuws/nieuws-fractie-1-motie/</link>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/nieuws/nieuws-fractie-1-motie/</guid>
+      <description>Fractie 1 heeft een motie ingediend over duurzaam beleid in onze regio.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+<div class="team-grid">
+  {{ if .team }}
+    {{ range .team.members }}
+      <div class="team-card">
+        <div class="team-card-photo-wrap">
+          <img class="team-card-photo" src="{{ .photo }}" alt="Foto van {{ .name }}" loading="lazy">
+        </div>
+        <div class="team-card-body">
+          <h3>{{ .name }}</h3>
+          <p class="team-role">{{ .role }}</p>
+          <blockquote class="team-statement">"{{ .statement }}"</blockquote>
+        </div>
+      </div>
+    {{ end }}
+  {{ else }}
+    <p class="no-content">Teaminformatie volgt binnenkort.</p>
+  {{ end }}
+</div>

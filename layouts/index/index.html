@@ -1,0 +1,57 @@
+{{ define "main" }}
+
+  {{/* ── HERO ── */}}
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">{{ .Site.Params.eyebrow | default "Europees denken, lokaal doen" }}</p>
+      <h1>{{ .Params.heroTitle | default .Site.Title }}</h1>
+      <p class="hero-tagline">{{ .Params.heroTagline | default .Site.Params.description }}</p>
+      <div class="hero-actions">
+        {{ with .Site.Params.programmaUrl }}
+          <a href="{{ . }}" class="btn btn-large btn-hero-primary">Ons programma</a>
+        {{ end }}
+        <a href="/meedoen/" class="btn btn-large btn-hero-outline">Doe mee</a>
+      </div>
+    </div>
+  </section>
+
+  {{/* ── VISIE ── */}}
+  {{ with .Site.Data.vision }}
+    {{ partial "visie-section.html" (dict
+        "title"    "Onze visie"
+        "intro"    $.Site.Params.visionIntro
+        "cards"    .cards
+        "link"     "/programma/"
+        "linkText" "Lees ons programma"
+    ) }}
+  {{ end }}
+
+  {{/* ── EVENEMENTEN ── */}}
+  <section class="events-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Aankomende evenementen</h2>
+          <p class="section-subtitle">Kom ons ontmoeten en praat mee over de toekomst.</p>
+        </div>
+        <a href="/evenementen/" class="view-all">Alle evenementen →</a>
+      </div>
+      {{ partial "events-section.html" (dict "tag" "" "limit" 3) }}
+    </div>
+  </section>
+
+  {{/* ── NIEUWS ── */}}
+  <section class="news-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Laatste nieuws</h2>
+          <p class="section-subtitle">Blijf op de hoogte van onze activiteiten.</p>
+        </div>
+        <a href="/nieuws/" class="view-all">Alle nieuws →</a>
+      </div>
+      {{ partial "news-section.html" (dict "tag" "" "limit" 3) }}
+    </div>
+  </section>
+
+{{ end }}

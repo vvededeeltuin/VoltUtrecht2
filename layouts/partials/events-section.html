@@ -1,0 +1,37 @@
+{{ $tag   := .tag }}
+{{ $limit := .limit | default 100 }}
+
+{{ $allEvents := where site.RegularPages "Type" "evenementen" }}
+
+{{ if $tag }}
+  {{ $filtered := slice }}
+  {{ range $allEvents }}
+    {{ if in .Params.tags $tag }}
+      {{ $filtered = $filtered | append . }}
+    {{ end }}
+  {{ end }}
+  {{ $allEvents = $filtered }}
+{{ end }}
+
+{{ $events := first $limit $allEvents }}
+
+{{ if $events }}
+  <div class="events-grid">
+    {{ range $events }}
+      <article class="event-card">
+        <div class="event-meta">
+          {{ with .Params.eventdate }}
+            <span class="event-date-badge">{{ dateFormat "2 Jan" . }}</span>
+          {{ end }}
+          {{ with .Params.location }}
+            <span class="event-location-text">📍 {{ . }}</span>
+          {{ end }}
+        </div>
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Params.summary | default .Summary }}</p>
+      </article>
+    {{ end }}
+  </div>
+{{ else }}
+  <p class="no-content">Nog geen evenementen gepland.</p>
+{{ end }}

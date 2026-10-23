@@ -1,0 +1,369 @@
+# ============================================================
+# Sveltia CMS — Volt Afdeling Utrecht
+# Beheerpaneel configuratie
+# Bereikbaar op: https://voltutrecht.pages.dev/admin/
+# ============================================================
+
+backend:
+  name: github
+  repo: vvededeeltuin/voltutrecht
+  branch: main
+  base_url: https://voltutrecht.pages.dev
+  auth_endpoint: api/auth
+
+# Afbeeldingen worden opgeslagen in static/img/
+media_folder: "static/img"
+public_folder: "/img"
+
+# Taal van de CMS interface
+locale: nl
+
+# ============================================================
+# COLLECTIES
+# ============================================================
+collections:
+
+  # ----------------------------------------------------------
+  # NIEUWS
+  # ----------------------------------------------------------
+  - name: "nieuws"
+    label: "Nieuws"
+    label_singular: "Nieuwsbericht"
+    folder: "content/nieuws"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "nieuws/{{slug}}"
+    fields:
+      - label: "Titel"
+        name: "title"
+        widget: "string"
+        hint: "De kop van het nieuwsbericht"
+
+      - label: "Publicatiedatum"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD-MM-YYYY"
+        time_format: false
+
+      - label: "Type"
+        name: "type"
+        widget: "hidden"
+        default: "nieuws"
+
+      - label: "Samenvatting"
+        name: "summary"
+        widget: "string"
+        hint: "Korte samenvatting — verschijnt op de nieuwsoverzichtspagina en community-pagina's"
+
+      - label: "Gekoppeld aan"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        required: false
+        hint: "Kies de community of fractie waarbij dit bericht hoort (laat leeg voor algemeen nieuws)"
+        options:
+          - { label: "Community Amersfoort",         value: "amersfoort" }
+          - { label: "Community Bunnik",              value: "bunnik" }
+          - { label: "Community 3",                   value: "community-3" }
+          - { label: "Community 4",                   value: "community-4" }
+          - { label: "Community 5",                   value: "community-5" }
+          - { label: "Community 6",                   value: "community-6" }
+          - { label: "Community 7",                   value: "community-7" }
+          - { label: "Community 8",                   value: "community-8" }
+          - { label: "Community 9",                   value: "community-9" }
+          - { label: "Community 10",                  value: "community-10" }
+          - { label: "Fractie Provinciale Staten",    value: "provinciale-staten" }
+          - { label: "Fractie De Bilt",               value: "de-bilt" }
+          - { label: "Fractie Houten",                value: "houten" }
+          - { label: "Fractie Soest",                 value: "soest" }
+          - { label: "Fractie Utrecht",               value: "utrecht" }
+          - { label: "Fractie Woerden",               value: "woerden" }
+          - { label: "Fractie Zeist",                 value: "zeist" }
+
+      - label: "Inhoud"
+        name: "body"
+        widget: "markdown"
+        hint: "De volledige tekst van het nieuwsbericht"
+
+  # ----------------------------------------------------------
+  # EVENEMENTEN
+  # ----------------------------------------------------------
+  - name: "evenementen"
+    label: "Evenementen"
+    label_singular: "Evenement"
+    folder: "content/evenementen"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "evenementen/{{slug}}"
+    fields:
+      - label: "Titel"
+        name: "title"
+        widget: "string"
+
+      - label: "Aanmaakdatum"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD-MM-YYYY"
+        time_format: false
+
+      - label: "Type"
+        name: "type"
+        widget: "hidden"
+        default: "evenementen"
+
+      - label: "Evenementdatum"
+        name: "eventdate"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD-MM-YYYY"
+        time_format: false
+        hint: "De datum waarop het evenement plaatsvindt"
+
+      - label: "Locatie"
+        name: "location"
+        widget: "string"
+        required: false
+        hint: "Bijv. Stadhuisplein, Amersfoort"
+
+      - label: "Samenvatting"
+        name: "summary"
+        widget: "string"
+        hint: "Korte omschrijving — verschijnt op de overzichtspagina"
+
+      - label: "Gekoppeld aan"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        required: false
+        hint: "Kies de community of fractie waarbij dit evenement hoort"
+        options:
+          - { label: "Community Amersfoort",         value: "amersfoort" }
+          - { label: "Community Bunnik",              value: "bunnik" }
+          - { label: "Community 3",                   value: "community-3" }
+          - { label: "Community 4",                   value: "community-4" }
+          - { label: "Community 5",                   value: "community-5" }
+          - { label: "Community 6",                   value: "community-6" }
+          - { label: "Community 7",                   value: "community-7" }
+          - { label: "Community 8",                   value: "community-8" }
+          - { label: "Community 9",                   value: "community-9" }
+          - { label: "Community 10",                  value: "community-10" }
+          - { label: "Fractie Provinciale Staten",    value: "provinciale-staten" }
+          - { label: "Fractie De Bilt",               value: "de-bilt" }
+          - { label: "Fractie Houten",                value: "houten" }
+          - { label: "Fractie Soest",                 value: "soest" }
+          - { label: "Fractie Utrecht",               value: "utrecht" }
+          - { label: "Fractie Woerden",               value: "woerden" }
+          - { label: "Fractie Zeist",                 value: "zeist" }
+
+      - label: "Inhoud"
+        name: "body"
+        widget: "markdown"
+        hint: "Volledige beschrijving van het evenement"
+
+  # ----------------------------------------------------------
+  # VACATURES
+  # ----------------------------------------------------------
+  - name: "vacatures"
+    label: "Vacatures"
+    label_singular: "Vacature"
+    folder: "content/vacatures"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Functietitel"
+        name: "title"
+        widget: "string"
+
+      - label: "Datum"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD-MM-YYYY"
+        time_format: false
+
+      - label: "Samenvatting"
+        name: "summary"
+        widget: "string"
+        required: false
+
+      - label: "Inhoud"
+        name: "body"
+        widget: "markdown"
+
+  # ----------------------------------------------------------
+  # TEAM BESTUUR
+  # ----------------------------------------------------------
+  - name: "team_bestuur"
+    label: "Team — Bestuur"
+    files:
+      - label: "Bestuur"
+        name: "bestuur"
+        file: "data/team/bestuur.yaml"
+        fields:
+          - label: "Teamleden"
+            name: "members"
+            widget: "list"
+            label_singular: "Teamlid"
+            fields:
+              - { label: "Naam",       name: "name",      widget: "string" }
+              - { label: "Rol",        name: "role",      widget: "string" }
+              - { label: "Uitspraak",  name: "statement", widget: "string",
+                  hint: "Persoonlijke uitspraak — verschijnt op de kaart" }
+              - label: "Foto"
+                name: "photo"
+                widget: "image"
+                media_folder: "/static/img/team"
+                public_folder: "/img/team"
+                hint: "Vierkante foto, minimaal 300×300px"
+
+  # ----------------------------------------------------------
+  # TEAM COMMUNITIES
+  # ----------------------------------------------------------
+  - name: "team_communities"
+    label: "Team — Communities"
+    files:
+      - label: "Amersfoort"
+        name: "amersfoort"
+        file: "data/team/amersfoort.yaml"
+        fields: &community_fields
+          - label: "Visie-kaarten (Waar staan wij voor)"
+            name: "vision"
+            widget: "list"
+            label_singular: "Visie-kaart"
+            fields:
+              - { label: "Naam + rol",  name: "person", widget: "string",
+                  hint: "Bijv. Anna Kowalska — Voorzitter" }
+              - { label: "Titel",       name: "title",  widget: "string" }
+              - { label: "Tekst",       name: "text",   widget: "text" }
+              - label: "Foto"
+                name: "photo"
+                widget: "image"
+                media_folder: "/static/img/team"
+                public_folder: "/img/team"
+          - label: "Teamleden (Wie zijn wij)"
+            name: "members"
+            widget: "list"
+            label_singular: "Teamlid"
+            fields:
+              - { label: "Naam",       name: "name",      widget: "string" }
+              - { label: "Rol",        name: "role",      widget: "string" }
+              - { label: "Uitspraak",  name: "statement", widget: "string" }
+              - label: "Foto"
+                name: "photo"
+                widget: "image"
+                media_folder: "/static/img/team"
+                public_folder: "/img/team"
+
+      - label: "Bunnik"
+        name: "bunnik"
+        file: "data/team/bunnik.yaml"
+        fields: *community_fields
+
+      - label: "Community 3"
+        name: "community-3"
+        file: "data/team/community-3.yaml"
+        fields: *community_fields
+
+      - label: "Community 4"
+        name: "community-4"
+        file: "data/team/community-4.yaml"
+        fields: *community_fields
+
+      - label: "Community 5"
+        name: "community-5"
+        file: "data/team/community-5.yaml"
+        fields: *community_fields
+
+      - label: "Community 6"
+        name: "community-6"
+        file: "data/team/community-6.yaml"
+        fields: *community_fields
+
+      - label: "Community 7"
+        name: "community-7"
+        file: "data/team/community-7.yaml"
+        fields: *community_fields
+
+      - label: "Community 8"
+        name: "community-8"
+        file: "data/team/community-8.yaml"
+        fields: *community_fields
+
+      - label: "Community 9"
+        name: "community-9"
+        file: "data/team/community-9.yaml"
+        fields: *community_fields
+
+      - label: "Community 10"
+        name: "community-10"
+        file: "data/team/community-10.yaml"
+        fields: *community_fields
+
+  # ----------------------------------------------------------
+  # TEAM FRACTIES
+  # ----------------------------------------------------------
+  - name: "team_fracties"
+    label: "Team — Fracties"
+    files:
+      - label: "Provinciale Staten"
+        name: "provinciale-staten"
+        file: "data/team/provinciale-staten.yaml"
+        fields: &fractie_fields
+          - label: "Visie-kaarten (Waar staan wij voor)"
+            name: "vision"
+            widget: "list"
+            label_singular: "Visie-kaart"
+            fields:
+              - { label: "Naam + rol",  name: "person", widget: "string" }
+              - { label: "Titel",       name: "title",  widget: "string" }
+              - { label: "Tekst",       name: "text",   widget: "text" }
+              - label: "Foto"
+                name: "photo"
+                widget: "image"
+                media_folder: "/static/img/team"
+                public_folder: "/img/team"
+          - label: "Fractieleden (Wie zijn wij)"
+            name: "members"
+            widget: "list"
+            label_singular: "Fractielid"
+            fields:
+              - { label: "Naam",       name: "name",      widget: "string" }
+              - { label: "Rol",        name: "role",      widget: "string" }
+              - { label: "Uitspraak",  name: "statement", widget: "string" }
+              - label: "Foto"
+                name: "photo"
+                widget: "image"
+                media_folder: "/static/img/team"
+                public_folder: "/img/team"
+
+      - label: "De Bilt"
+        name: "de-bilt"
+        file: "data/team/de-bilt.yaml"
+        fields: *fractie_fields
+
+      - label: "Houten"
+        name: "houten"
+        file: "data/team/houten.yaml"
+        fields: *fractie_fields
+
+      - label: "Soest"
+        name: "soest"
+        file: "data/team/soest.yaml"
+        fields: *fractie_fields
+
+      - label: "Utrecht"
+        name: "utrecht"
+        file: "data/team/utrecht.yaml"
+        fields: *fractie_fields
+
+      - label: "Woerden"
+        name: "woerden"
+        file: "data/team/woerden.yaml"
+        fields: *fractie_fields
+
+      - label: "Zeist"
+        name: "zeist"
+        file: "data/team/zeist.yaml"
+        fields: *fractie_fields

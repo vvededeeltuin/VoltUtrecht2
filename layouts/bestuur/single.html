@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
+    </div>
+  </div>
+  <div class="page-content">
+    {{ with .Content }}<div class="intro-section">{{ . }}</div>{{ end }}
+    <section class="team-section" style="padding:0 0 3rem;">
+      <h2 class="section-title" style="margin-bottom:1.5rem;">Het bestuur</h2>
+      {{ $teamData := index site.Data.team "bestuur" }}
+      {{ partial "team-section.html" (dict "team" $teamData) }}
+    </section>
+  </div>
+{{ end }}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amersfoort on Volt Afdeling Utrecht</title>
+    <link>http://localhost:1313/tags/amersfoort/</link>
+    <description>Recent content in Amersfoort on Volt Afdeling Utrecht</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl</language>
+    <lastBuildDate>Mon, 20 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/amersfoort/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zomerborrel Volt Amersfoort</title>
+      <link>http://localhost:1313/evenementen/buurtfeest-amersfoort/</link>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/evenementen/buurtfeest-amersfoort/</guid>
+      <description>Gezellige zomerborrel voor Volt leden en sympathisanten in Amersfoort.</description>
+    </item>
+    <item>
+      <title>Volt Amersfoort opent nieuw kantoor</title>
+      <link>http://localhost:1313/nieuws/nieuws-amersfoort-opening/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/nieuws/nieuws-amersfoort-opening/</guid>
+      <description>De Volt community Amersfoort heeft een nieuw ontmoetingspunt geopend in het centrum van de stad.</description>
+    </item>
+  </channel>
+</rss>

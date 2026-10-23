@@ -1,0 +1,15 @@
+members:
+  - name: "Lars Bakker"
+    role: "Voorzitter"
+    statement: "Ik geloof in een Europa dat ons allemaal sterker maakt — te beginnen in Utrecht."
+    photo: "/img/team/lars-bakker.jpg"
+
+  - name: "Sofia de Vries"
+    role: "Secretaris"
+    statement: "Transparantie en verbinding zijn de basis van goede politiek."
+    photo: "/img/team/sofia-de-vries.jpg"
+
+  - name: "Ahmed El Ouali"
+    role: "Penningmeester"
+    statement: "Een gezonde financiële basis geeft ons de vrijheid om te groeien."
+    photo: "/img/team/ahmed-el-ouali.jpg"

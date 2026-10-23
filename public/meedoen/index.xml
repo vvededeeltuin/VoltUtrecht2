@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Doe mee on Volt Afdeling Utrecht</title>
+    <link>http://localhost:1313/meedoen/</link>
+    <description>Recent content in Doe mee on Volt Afdeling Utrecht</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl</language>
+    <atom:link href="http://localhost:1313/meedoen/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

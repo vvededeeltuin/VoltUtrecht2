@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nieuws on Volt Afdeling Utrecht</title>
+    <link>http://localhost:1313/news/</link>
+    <description>Recent content in Nieuws on Volt Afdeling Utrecht</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl</language>
+    <lastBuildDate>Mon, 15 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Opening nieuw ontmoetingspunt Community 1</title>
+      <link>http://localhost:1313/news/nieuws-community-1-opening/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/nieuws-community-1-opening/</guid>
+      <description>Community 1 opent een nieuw ontmoetingspunt in het centrum.</description>
+    </item>
+    <item>
+      <title>Fractie 1 dient motie in over duurzaamheid</title>
+      <link>http://localhost:1313/news/nieuws-fractie-1-motie/</link>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/nieuws-fractie-1-motie/</guid>
+      <description>Fractie 1 heeft een motie ingediend over duurzaam beleid in onze regio.</description>
+    </item>
+    <item>
+      <title>Jaarvergadering beweging - save the date</title>
+      <link>http://localhost:1313/news/nieuws-algemeen-jaarvergadering/</link>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/nieuws-algemeen-jaarvergadering/</guid>
+      <description>De jaarlijkse vergadering van onze beweging vindt plaats op 15 september.</description>
+    </item>
+  </channel>
+</rss>

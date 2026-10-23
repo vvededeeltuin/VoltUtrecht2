@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evenementen | Volt Afdeling Utrecht</title>
+  <meta name="description" content="Alle evenementen van onze beweging, communities en fracties">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+  <nav class="navbar">
+  <div class="navbar-inner">
+    <a class="navbar-brand" href="/">
+      <span class="brand-volt">Volt</span>
+      Afdeling Utrecht
+    </a>
+
+    <button class="navbar-toggle" id="navToggle" aria-label="Menu">☰</button>
+
+    <ul class="nav-menu" id="navMenu">
+      
+        
+          <li class="nav-item">
+            <a href="/nieuws/">
+              Nieuws
+            </a>
+          </li>
+        
+      
+        
+          <li class="nav-item has-dropdown">
+            
+            <a class="nav-parent-link" href="/communities/">Communities</a>
+            <button class="dropdown-toggle" aria-label="Toon submenu voor Communities">▾</button>
+            <ul class="dropdown">
+              
+                <li>
+                  <a href="/communities/amersfoort/">
+                    Amersfoort
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/bunnik/">
+                    Bunnik
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-3/">
+                    Community 3
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-4/">
+                    Community 4
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-5/">
+                    Community 5
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-6/">
+                    Community 6
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-7/">
+                    Community 7
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-8/">
+                    Community 8
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-9/">
+                    Community 9
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/communities/community-10/">
+                    Community 10
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="nav-item has-dropdown">
+            
+            <a class="nav-parent-link" href="/fracties/">Fracties</a>
+            <button class="dropdown-toggle" aria-label="Toon submenu voor Fracties">▾</button>
+            <ul class="dropdown">
+              
+                <li>
+                  <a href="/fracties/provinciale-staten/">
+                    Provinciale Staten
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/fracties/de-bilt/">
+                    De Bilt
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/fracties/houten/">
+                    Houten
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/fracties/soest/">
+                    Soest
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/fracties/utrecht/">
+                    Utrecht
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/fracties/woerden/">
+                    Woerden
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/fracties/zeist/">
+                    Zeist
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="nav-item has-dropdown">
+            
+            <a class="nav-parent-link" href="/beweging/">Beweging</a>
+            <button class="dropdown-toggle" aria-label="Toon submenu voor Beweging">▾</button>
+            <ul class="dropdown">
+              
+                <li>
+                  <a href="/beweging/klimaat/">
+                    Klimaat
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/beweging/vluchtelingen/">
+                    Vluchtelingen
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/beweging/oekraine/">
+                    Oekraïne
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/beweging/thema-4/">
+                    Thema 4
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+            <a href="/evenementen/">
+              Evenementen
+            </a>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+            <a href="/bestuur/">
+              Bestuur
+            </a>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+            <a href="/meedoen/">
+              Doe mee
+            </a>
+          </li>
+        
+      
+    </ul>
+
+    <div class="nav-cta">
+      
+        <a href="/meedoen/" class="btn btn-primary">Word lid</a>
+      
+    </div>
+  </div>
+</nav>
+
+<script>
+(function() {
+  
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+
+  
+  
+  document.querySelectorAll('.dropdown-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var li = this.closest('.has-dropdown');
+      var isOpen = li.classList.contains('open');
+      
+      document.querySelectorAll('.has-dropdown.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+      if (!isOpen) li.classList.add('open');
+    });
+  });
+
+  
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.has-dropdown.open').forEach(function(el) {
+      el.classList.remove('open');
+    });
+  });
+
+  
+  if (window.matchMedia('(min-width: 821px)').matches) {
+    document.querySelectorAll('.has-dropdown').forEach(function(li) {
+      li.addEventListener('mouseenter', function() { this.classList.add('open'); });
+      li.addEventListener('mouseleave', function() { this.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+
+  <main>
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <h1>Evenementen</h1>
+      <p class="lead">Alle evenementen van onze beweging, communities en fracties</p>
+    </div>
+  </div>
+  <div class="page-content">
+    
+
+
+
+
+
+
+
+
+
+  <div class="events-grid">
+    
+      <article class="event-card">
+        <div class="event-meta">
+          
+            <span class="event-date-badge">5 Aug</span>
+          
+          
+            <span class="event-location-text">📍 Gemeentehuis, Zaal A</span>
+          
+        </div>
+        <h3><a href="http://localhost:1313/evenementen/debatavond-fractie-1/">Debatavond Fractie 1: Duurzame toekomst</a></h3>
+        <p>Fractie 1 organiseert een open debatavond over duurzaamheid en de toekomst van onze regio.</p>
+      </article>
+    
+      <article class="event-card">
+        <div class="event-meta">
+          
+            <span class="event-date-badge">5 Aug</span>
+          
+          
+            <span class="event-location-text">📍 Stadhuis Utrecht, Zaal A</span>
+          
+        </div>
+        <h3><a href="http://localhost:1313/evenementen/debat-utrecht/">Debatavond: Betaalbaar wonen in Utrecht</a></h3>
+        <p>Volt Utrecht organiseert een open debatavond over de wooncrisis en wat we er samen aan kunnen doen.</p>
+      </article>
+    
+      <article class="event-card">
+        <div class="event-meta">
+          
+            <span class="event-date-badge">20 Jul</span>
+          
+          
+            <span class="event-location-text">📍 Marktplein, Community 1</span>
+          
+        </div>
+        <h3><a href="http://localhost:1313/evenementen/buurtfeest-community-1/">Buurtfeest Community 1</a></h3>
+        <p>Gezellig buurtfeest met muziek, eten en activiteiten voor jong en oud.</p>
+      </article>
+    
+      <article class="event-card">
+        <div class="event-meta">
+          
+            <span class="event-date-badge">20 Jul</span>
+          
+          
+            <span class="event-location-text">📍 Stadhuisplein, Amersfoort</span>
+          
+        </div>
+        <h3><a href="http://localhost:1313/evenementen/buurtfeest-amersfoort/">Zomerborrel Volt Amersfoort</a></h3>
+        <p>Gezellige zomerborrel voor Volt leden en sympathisanten in Amersfoort.</p>
+      </article>
+    
+  </div>
+
+
+  </div>
+</main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Volt Afdeling Utrecht</div>
+      <div class="footer-email">
+        <a href="mailto:info@voltutrecht.nl">info@voltutrecht.nl</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://facebook.com/" aria-label="Facebook">fb</a>
+        <a href="https://instagram.com/" aria-label="Instagram">ig</a>
+        <a href="https://linkedin.com/" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="/nieuws/">Nieuws</a>
+      <a href="/evenementen/">Evenementen</a>
+      <a href="/bestuur/">Bestuur</a>
+      <a href="/vacatures/">Vacatures</a>
+      <a href="/meedoen/">Doe mee</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Volt Afdeling Utrecht &middot;
+    <a href="/privacy/">Privacy &amp; Cookies</a>
+  </div>
+</footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('open');
+    });
+    document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        if (window.innerWidth < 820) {
+          e.preventDefault();
+          this.parentElement.classList.toggle('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

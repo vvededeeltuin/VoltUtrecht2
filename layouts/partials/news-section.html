@@ -1,0 +1,30 @@
+{{ $tag   := .tag }}
+{{ $limit := .limit | default 100 }}
+
+{{ $allNews := where site.RegularPages "Type" "nieuws" }}
+
+{{ if $tag }}
+  {{ $filtered := slice }}
+  {{ range $allNews }}
+    {{ if in .Params.tags $tag }}
+      {{ $filtered = $filtered | append . }}
+    {{ end }}
+  {{ end }}
+  {{ $allNews = $filtered }}
+{{ end }}
+
+{{ $news := first $limit $allNews }}
+
+{{ if $news }}
+  <div class="news-grid">
+    {{ range $news }}
+      <article class="news-card">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Params.summary | default .Summary }}</p>
+      </article>
+    {{ end }}
+  </div>
+{{ else }}
+  <p class="no-content">Nog geen nieuwsberichten beschikbaar.</p>
+{{ end }}

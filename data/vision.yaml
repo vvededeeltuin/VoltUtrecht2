@@ -1,0 +1,15 @@
+cards:
+  - person: "Lars Bakker — Voorzitter"
+    title: "Voor iedereen een eerlijke kans"
+    text: "We laten niemand achter in de regio Utrecht. Van energiearmoede tot jeugdzorg — verbinding en een weerbare samenleving staan bij ons centraal."
+    photo: "/img/team/lars-bakker.jpg"
+
+  - person: "Sofia de Vries — Secretaris"
+    title: "Samen besturen met de buurt"
+    text: "Wij willen echte participatie. Toekomstgericht, met burgerberaden en een burgerbegroting die iedereen laat meepraten over Utrecht."
+    photo: "/img/team/sofia-de-vries.jpg"
+
+  - person: "Ahmed El Ouali — Raadslid"
+    title: "Groen en bereikbaar Utrecht"
+    text: "Met duurzaamheid als basis werken wij aan groene mobiliteit, betaalbaar wonen en een leefbare stad voor iedereen."
+    photo: "/img/team/ahmed-el-ouali.jpg"

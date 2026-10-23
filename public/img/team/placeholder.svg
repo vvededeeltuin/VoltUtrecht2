@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#dde4f0"/>
+  <circle cx="150" cy="110" r="55" fill="#9ca3af"/>
+  <ellipse cx="150" cy="280" rx="90" ry="70" fill="#9ca3af"/>
+  <text x="150" y="175" text-anchor="middle" fill="#6b7280" font-size="14" font-family="sans-serif">Foto volgt</text>
+</svg>

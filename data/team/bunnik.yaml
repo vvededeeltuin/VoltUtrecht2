@@ -1,0 +1,19 @@
+vision:
+  - person: "Sofia de Vries — Voorzitter"
+    title: "Klein maar krachtig"
+    text: "Bunnik speelt een grote rol in de groene regio Utrecht. Wij zetten ons in voor een leefbare, groene en sociale gemeente."
+    photo: "/img/team/sofia-de-vries.jpg"
+  - person: "Lars Bakker — Secretaris"
+    title: "Lokaal én Europees"
+    text: "Lokale betrokkenheid en Europese visie gaan hand in hand. Wat in Brussel wordt besloten, voelen wij in Bunnik."
+    photo: "/img/team/lars-bakker.jpg"
+
+members:
+  - name: "Sofia de Vries"
+    role: "Voorzitter"
+    statement: "Bunnik is klein maar speelt een grote rol in de groene regio Utrecht."
+    photo: "/img/team/sofia-de-vries.jpg"
+  - name: "Lars Bakker"
+    role: "Secretaris"
+    statement: "Lokale betrokkenheid en Europese visie gaan hand in hand."
+    photo: "/img/team/lars-bakker.jpg"

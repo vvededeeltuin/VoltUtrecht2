@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
+    </div>
+  </div>
+  <div class="container">
+    {{ partial "news-section.html" (dict "tag" "") }}
+  </div>
+{{ end }}

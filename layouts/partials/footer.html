@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">{{ .Site.Title }}</div>
+      <div class="footer-email">
+        {{ with .Site.Params.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+      </div>
+      <div class="footer-social">
+        {{ with .Site.Params.facebook }}<a href="{{ . }}" aria-label="Facebook">fb</a>{{ end }}
+        {{ with .Site.Params.instagram }}<a href="{{ . }}" aria-label="Instagram">ig</a>{{ end }}
+        {{ with .Site.Params.linkedin }}<a href="{{ . }}" aria-label="LinkedIn">in</a>{{ end }}
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="/nieuws/">Nieuws</a>
+      <a href="/evenementen/">Evenementen</a>
+      <a href="/bestuur/">Bestuur</a>
+      <a href="/vacatures/">Vacatures</a>
+      <a href="/meedoen/">Doe mee</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; {{ now.Year }} {{ .Site.Title }} &middot;
+    <a href="/privacy/">Privacy &amp; Cookies</a>
+  </div>
+</footer>

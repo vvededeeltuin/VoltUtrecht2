@@ -1,0 +1,182 @@
+baseURL = "https://yoursite.pages.dev/"
+languageCode = "nl"
+title = "Volt Afdeling Utrecht"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  description   = "Sociaal, groen en verbindend. Samen bouwen we aan de toekomst van Utrecht."
+  location      = "Afdeling Utrecht"
+  email         = "info@voltutrecht.nl"
+  visionIntro   = "Samen geven we iedereen een eerlijke kans en maken we onze regio toekomstbestendig."
+  eyebrow       = "Europees denken, lokaal doen"
+  programmaUrl  = "/programma/"
+  joinUrl       = "/meedoen/"
+  donateUrl     = "/doneer/"
+  facebook      = "https://facebook.com/"
+  instagram     = "https://instagram.com/"
+  linkedin      = "https://linkedin.com/"
+
+[menu]
+
+  [[menu.main]]
+    name   = "Nieuws"
+    url    = "/nieuws/"
+    weight = 1
+
+  [[menu.main]]
+    name   = "Communities"
+    url    = "/communities/"
+    weight = 2
+
+  [[menu.main]]
+    name   = "Amersfoort"
+    url    = "/communities/amersfoort/"
+    parent = "Communities"
+    weight = 1
+
+  [[menu.main]]
+    name   = "Bunnik"
+    url    = "/communities/bunnik/"
+    parent = "Communities"
+    weight = 2
+
+  [[menu.main]]
+    name   = "Community 3"
+    url    = "/communities/community-3/"
+    parent = "Communities"
+    weight = 3
+
+  [[menu.main]]
+    name   = "Community 4"
+    url    = "/communities/community-4/"
+    parent = "Communities"
+    weight = 4
+
+  [[menu.main]]
+    name   = "Community 5"
+    url    = "/communities/community-5/"
+    parent = "Communities"
+    weight = 5
+
+  [[menu.main]]
+    name   = "Community 6"
+    url    = "/communities/community-6/"
+    parent = "Communities"
+    weight = 6
+
+  [[menu.main]]
+    name   = "Community 7"
+    url    = "/communities/community-7/"
+    parent = "Communities"
+    weight = 7
+
+  [[menu.main]]
+    name   = "Community 8"
+    url    = "/communities/community-8/"
+    parent = "Communities"
+    weight = 8
+
+  [[menu.main]]
+    name   = "Community 9"
+    url    = "/communities/community-9/"
+    parent = "Communities"
+    weight = 9
+
+  [[menu.main]]
+    name   = "Community 10"
+    url    = "/communities/community-10/"
+    parent = "Communities"
+    weight = 10
+
+  [[menu.main]]
+    name   = "Fracties"
+    url    = "/fracties/"
+    weight = 3
+
+  [[menu.main]]
+    name   = "Provinciale Staten"
+    url    = "/fracties/provinciale-staten/"
+    parent = "Fracties"
+    weight = 1
+
+  [[menu.main]]
+    name   = "De Bilt"
+    url    = "/fracties/de-bilt/"
+    parent = "Fracties"
+    weight = 2
+
+  [[menu.main]]
+    name   = "Houten"
+    url    = "/fracties/houten/"
+    parent = "Fracties"
+    weight = 3
+
+  [[menu.main]]
+    name   = "Soest"
+    url    = "/fracties/soest/"
+    parent = "Fracties"
+    weight = 4
+
+  [[menu.main]]
+    name   = "Utrecht"
+    url    = "/fracties/utrecht/"
+    parent = "Fracties"
+    weight = 5
+
+  [[menu.main]]
+    name   = "Woerden"
+    url    = "/fracties/woerden/"
+    parent = "Fracties"
+    weight = 6
+
+  [[menu.main]]
+    name   = "Zeist"
+    url    = "/fracties/zeist/"
+    parent = "Fracties"
+    weight = 7
+
+  [[menu.main]]
+    name   = "Beweging"
+    url    = "/beweging/"
+    weight = 4
+
+  [[menu.main]]
+    name   = "Klimaat"
+    url    = "/beweging/klimaat/"
+    parent = "Beweging"
+    weight = 1
+
+  [[menu.main]]
+    name   = "Vluchtelingen"
+    url    = "/beweging/vluchtelingen/"
+    parent = "Beweging"
+    weight = 2
+
+  [[menu.main]]
+    name   = "Oekraïne"
+    url    = "/beweging/oekraine/"
+    parent = "Beweging"
+    weight = 3
+
+  [[menu.main]]
+    name   = "Thema 4"
+    url    = "/beweging/thema-4/"
+    parent = "Beweging"
+    weight = 4
+
+  [[menu.main]]
+    name   = "Evenementen"
+    url    = "/evenementen/"
+    weight = 5
+
+  [[menu.main]]
+    name   = "Bestuur"
+    url    = "/bestuur/"
+    weight = 6
+
+  [[menu.main]]
+    name   = "Doe mee"
+    url    = "/meedoen/"
+    weight = 7

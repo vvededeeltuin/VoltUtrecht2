@@ -1,0 +1,86 @@
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="navbar-brand" href="/">
+      <span class="brand-volt">Volt</span>
+      {{ .Site.Params.location | default "Beweging" }}
+    </a>
+
+    <button class="navbar-toggle" id="navToggle" aria-label="Menu">☰</button>
+
+    <ul class="nav-menu" id="navMenu">
+      {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+          <li class="nav-item has-dropdown">
+            {{/*
+              Split into two elements:
+              1. The label → navigates to the parent page URL
+              2. The arrow button → toggles the dropdown only
+            */}}
+            <a class="nav-parent-link" href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a>
+            <button class="dropdown-toggle" aria-label="Toon submenu voor {{ .Name }}">▾</button>
+            <ul class="dropdown">
+              {{ range .Children }}
+                <li>
+                  <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>
+                    {{ .Name }}
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          </li>
+        {{ else if not .Parent }}
+          <li class="nav-item">
+            <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+
+    <div class="nav-cta">
+      {{ with .Site.Params.joinUrl }}
+        <a href="{{ . }}" class="btn btn-primary">Word lid</a>
+      {{ end }}
+    </div>
+  </div>
+</nav>
+
+<script>
+(function() {
+  // Mobile hamburger
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+
+  // Each dropdown-toggle button opens/closes its dropdown
+  // The nav-parent-link always navigates (never prevented)
+  document.querySelectorAll('.dropdown-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var li = this.closest('.has-dropdown');
+      var isOpen = li.classList.contains('open');
+      // Close all other open dropdowns
+      document.querySelectorAll('.has-dropdown.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+      if (!isOpen) li.classList.add('open');
+    });
+  });
+
+  // Close dropdowns when clicking anywhere else
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.has-dropdown.open').forEach(function(el) {
+      el.classList.remove('open');
+    });
+  });
+
+  // On desktop, also show dropdown on hover
+  if (window.matchMedia('(min-width: 821px)').matches) {
+    document.querySelectorAll('.has-dropdown').forEach(function(li) {
+      li.addEventListener('mouseenter', function() { this.classList.add('open'); });
+      li.addEventListener('mouseleave', function() { this.classList.remove('open'); });
+    });
+  }
+})();
+</script>
